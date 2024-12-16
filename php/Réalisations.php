@@ -3,7 +3,7 @@
         <div class="realisations-container">
     <?php
     // Charger le fichier YAML
-    require_once("yaml/yaml.php");
+    require_once("YAML/yaml.php");
 
     // Lire et analyser le fichier YAML
     $data = yaml_parse_file('fichieryaml/Réalisation.yaml');
