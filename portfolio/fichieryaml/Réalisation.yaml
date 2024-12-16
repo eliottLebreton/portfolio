@@ -1,0 +1,5 @@
+realisations:
+  - titre: "Puissance 4"
+    description: "Pour un projet personnel, j'ai créé un puissance 4 en Java utilisant l'adresse IP de la machine qui héberge le jeu pouvant être joué à 2 sur deux machines différentes."
+    illustration: "acceuilP4.png"
+    illustration2: "grilleP4.png"

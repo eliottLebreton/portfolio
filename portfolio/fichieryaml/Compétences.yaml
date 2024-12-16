@@ -1,0 +1,16 @@
+titre: "Bienvenue sur mon portfolio"
+Competence:
+  - domaine: "Développement"
+    item:
+      - nom: "HTML"
+        niveau: "3/5"
+      - nom: "CSS"
+        niveau: "3/5"
+      - nom: "Java"
+        niveau: "2/5"
+  - domaine: "Langues"
+    item:
+      - nom: "Français"
+        niveau: "5/5"
+      - nom: "Anglais"
+        niveau: "3/5"
