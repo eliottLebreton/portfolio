@@ -55,7 +55,7 @@
     <div class="formations-container">
     <?php
     // Charger le fichier YAML
-    require_once("YAML\yaml.php");
+    require_once("yaml\yaml.php");
     
     // Lire et analyser le fichier YAML
     $data = yaml_parse_file('fichieryaml/Formation.yaml');

@@ -2,7 +2,7 @@
     <div class="accueil">
 
 <?php
-require_once("YAML\yaml.php");
+require_once("yaml\yaml.php");
 $data=yaml_parse_file('fichieryaml/Accueil.yaml');
 
 echo "<h2>Présentation</h2>\n";
