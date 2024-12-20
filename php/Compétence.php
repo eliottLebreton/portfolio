@@ -3,7 +3,7 @@
 
 <?php
     // Charger le fichier YAML
-    require_once("yaml\yaml.php");
+    require_once("yaml/yaml.php");
     $data = yaml_parse_file('fichieryaml/Compétences.yaml');
 
     // Vérifier si le fichier YAML contient des compétences
