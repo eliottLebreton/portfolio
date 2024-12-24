@@ -5,7 +5,7 @@ Formation:
     date_fin: "06/2026"
     lieu: "Caen"
     contenu: "réseau et programmation"
-    lien_cv_pdf: "URL vers le CV en PDF"
+    CV: "CV elliot.docx.pdf"
   - nom: "Bac STI2D"
     etablissement: "Lycée Arcisse de Caumont"
     date_debut: "09/2021"

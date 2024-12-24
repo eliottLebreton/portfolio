@@ -88,8 +88,8 @@
             }
 
             // Lien vers le CV PDF (si présent)
-            if (!empty($Formation['lien_cv_pdf'])) {
-                echo "<p><a href='" . htmlspecialchars($Formation['lien_cv_pdf']) . "' target='_blank'>Voir le CV (PDF)</a></p>";
+            if (!empty($Formation['CV'])) {
+                echo "<p><a href='" . htmlspecialchars($Formation['CV']) . "' target='_blank'>Voir le CV (PDF)</a></p>";
             }
 
             echo "</div>";
