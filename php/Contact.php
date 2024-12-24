@@ -8,8 +8,8 @@
 <?php
 $data = yaml_parse_file('fichieryaml/Contact.yaml');
 
-$recaptcha_site_key = '6LfU7qQqAAAAAGij7TIaCdExdBQOUOEc3WtbafXH';
-$recaptcha_secret_key = '6LfU7qQqAAAAANCxtRQW-w5Gt5hOm8sdxDUVoobv';
+$recaptcha_site_key = '6LcB-6QqAAAAADsWl8oqaxNwwb7Hg78WqNBMqT4O';
+$recaptcha_secret_key = '6LcB-6QqAAAAAFp1bAJi9fQltbDnHCb6vSfp7CzT';
 
 
 
