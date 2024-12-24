@@ -10,8 +10,11 @@ Formation:
     etablissement: "Lycée Arcisse de Caumont"
     date_debut: "09/2021"
     date_fin: "06/2023"
+    lieu: "Bayeux"
     contenu: "bac technologique option SIN"
   - nom: "Brevet"
-    etablissement: "Brevet Des Colleges"
+    etablissement: "Collège du Bois d'Orceau"
     date_debut: "09/2016"
     date_fin: "06/2020"
+    lieu: Tilly-Sur-Seulles
+    contenu: "Brevet Des Colleges"

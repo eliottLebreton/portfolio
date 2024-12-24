@@ -1,111 +1,105 @@
-/* Styles généraux */
+/* Style global */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding-top: 50px; /* Décalage pour éviter que le contenu ne soit caché par la barre de navigation */
+    background: linear-gradient(135deg, #FF5E62, #FF9966); /* Dégradé de couleur doux */
+    color: #fff;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Style du wrapper pour le formulaire */
+.wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    color: #333;
+    align-items: center;
+    padding: 40px 0;
 }
 
-h2 {
-    text-align: center;
-    color: #444;
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-/* Conteneur principal pour le formulaire */
-form {
-    background: #fff;
-    padding: 20px;
+.container-contact {
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre transparent */
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
     width: 100%;
-    box-sizing: border-box;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-/* Labels des champs */
+/* Titre du formulaire */
+.container-contact h1 {
+    font-size: 32px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Style des labels */
 label {
-    font-weight: bold;
     display: block;
+    font-size: 14px;
+    color: #fff;
     margin-bottom: 5px;
 }
 
-/* Champs de saisie */
+/* Style des champs de saisie (input et textarea) */
 input[type="text"],
 input[type="email"],
 textarea {
-    width: calc(100% - 10px);
-    padding: 8px 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    font-size: 16px;
-    color: #555;
-}
-
-/* Zone de texte (textarea) */
-textarea {
-    resize: none;
-    height: 80px;
-}
-
-/* Bouton d'envoi */
-input[type="submit"] {
-    background: #4caf50;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
     width: 100%;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    padding: 12px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #4CAF50; /* Bordure verte au focus */
+    outline: none;
+}
+
+/* Style du bouton d'envoi */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #FF5733; /* Orange vif */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
-    background: #45a049;
+button:hover {
+    background-color: #FF9933; /* Changement de couleur au survol */
 }
 
-/* Messages d'erreur ou de confirmation */
-.error,
-.success {
-    font-size: 14px;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    text-align: center;
+/* Style pour le reCAPTCHA */
+.g-recaptcha {
+    margin: 20px 0;
 }
 
-.error {
-    background: #ffdddd;
-    color: #d8000c;
-    border: 1px solid #d8000c;
-}
-
-.success {
-    background: #ddffdd;
-    color: #4caf50;
-    border: 1px solid #4caf50;
-}
-
-/* Responsivité */
+/* Responsive design */
 @media (max-width: 600px) {
-    form {
-        padding: 15px;
+    .container-contact {
+        padding: 20px;
+        width: 90%;
     }
 
-    input[type="submit"] {
+    .container-contact h1 {
+        font-size: 28px;
+    }
+
+    button {
         font-size: 14px;
     }
 }

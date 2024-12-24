@@ -1,53 +1,46 @@
+<head>
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<section id="Contact">
+    <div class="accueil">
+
 <?php
+$data = yaml_parse_file('fichieryaml/Contact.yaml');
 
-require 'vendor/autoload.php';
+$recaptcha_site_key = '6LfU7qQqAAAAAGij7TIaCdExdBQOUOEc3WtbafXH';
+$recaptcha_secret_key = '6LfU7qQqAAAAANCxtRQW-w5Gt5hOm8sdxDUVoobv';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $prenom = htmlspecialchars($_POST['prenom']);
-    $nom = htmlspecialchars($_POST['nom']);
-    $email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL);
-    $message = htmlspecialchars($_POST['message']);
 
-    // Validation des entrées
-    if (!$email) {
-        echo "L'adresse email est invalide.";
-        exit;
-    }
-    if (strlen($message) > 1000) {
-        echo "Le message est trop long.";
-        exit;
-    }
 
-    $mail = new PHPMailer(true);
+echo "<div class='wrapper'>";
+echo "<div class='container-contact'>";
+echo "<h1>Contact</h1>";
 
-    try {
-        // Configuration du serveur SMTP
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = getenv('SMTP_USERNAME'); // Variables d'environnement
-        $mail->Password = getenv('SMTP_PASSWORD');
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port = 587;
+echo "<form method='POST' action=''>";
 
-        // Destinataire et expéditeur
-        $mail->setFrom($email, "$prenom $nom");
-        $mail->addAddress('destinataire@example.com');
+echo "<label for='nom'>Nom :</label>";
+echo "<input type='text' id='nom' name='nom' placeholder='" . $data[0]['nom'] . "' required>";
 
-        // Contenu de l'email
-        $mail->isHTML(true);
-        $mail->Subject = "Message de $prenom $nom";
-        $mail->Body = "<p>Message : " . nl2br(htmlspecialchars($message)) . "</p>
-                       <p>De : $prenom $nom</p>
-                       <p>Email : $email</p>";
-        $mail->AltBody = "Message : $message\n\nDe : $prenom $nom\nEmail : $email";
+echo "<label for='adresse'>Adresse e-mail :</label>";
+echo "<input type='email' id='adresse' name='adresse' placeholder='" . $data[0]['adresse'] . "' required>";
 
-        // Envoi du message
-        $mail->send();
-        echo 'Le message a été envoyé avec succès.';
-    } catch (Exception $e) {
-        error_log("Erreur d'envoi de mail : {$mail->ErrorInfo}");
-        echo "Une erreur s'est produite. Veuillez réessayer plus tard.";
-    }
-}
+echo "<label for='objet'>Objet :</label>";
+echo "<input type='text' id='objet' name='objet' placeholder='" . $data[0]['objet'] . "' required>";
+
+echo "<label for='contenu-message'>Message :</label>";
+echo "<textarea id='contenu-message' name='contenu-message' placeholder='" . $data[0]['contenu-message'] . "' required></textarea>";
+
+echo "<div class='g-recaptcha' data-sitekey='" . $recaptcha_site_key . "'></div>";
+
+echo "<button type='submit'>Envoyer</button>";
+echo "</form>";
+
+echo "</div>";
+echo "</div>";
 ?>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    </div>
+</section>
